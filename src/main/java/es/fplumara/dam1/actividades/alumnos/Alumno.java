@@ -20,7 +20,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{dni='" + dni + "', nombre='" + nombre + "'}";
+        return "Alumno{dni='" + dni + "', nombre='" + nombre + "'}\n";
     }
 
 }
