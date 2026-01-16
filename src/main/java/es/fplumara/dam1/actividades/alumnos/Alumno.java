@@ -1,5 +1,7 @@
 package es.fplumara.dam1.actividades.alumnos;
 
+import java.util.Objects;
+
 public class Alumno {
     private final String dni;
     private final String nombre;
@@ -23,4 +25,15 @@ public class Alumno {
         return "Alumno{dni='" + dni + "', nombre='" + nombre + "'}\n";
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Alumno alumno = (Alumno) o;
+        return Objects.equals(dni, alumno.dni);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dni);
+    }
 }
